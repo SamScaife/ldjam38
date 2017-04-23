@@ -499,7 +499,7 @@ AllYardDialogue.Add(
 		//speaker
 		'Imposter',
 		//dialogue
-		'Agreed, I\'ll distract the guard.'
+		'Agreed, I\'ll distract the guard.',
 		//imageAmount
 		1,
 		//image1
@@ -529,7 +529,7 @@ AllYardDialogue.Add(
 		//speaker
 		'Pickpocket',
 		//dialogue
-		'I can get those keys.'
+		'I can get those keys.',
 		//imageAmount
 		1,
 		//image1
@@ -559,7 +559,7 @@ AllYardDialogue.Add(
 		//speaker
 		'Arsonist',
 		//dialogue
-		'About time I get to start a fire!'
+		'About time I get to start a fire!',
 		//imageAmount
 		1,
 		//image1
@@ -584,7 +584,7 @@ AllYardDialogue.Add(
 );
 
 function startDistractionScene() {
-	
+	print('begin');
 }
 
 function continueYardDialogue() {
