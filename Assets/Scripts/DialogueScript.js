@@ -24,7 +24,7 @@ function Start() {
 }
 
 function UpdateDialogueArea(speakerText: String, dialogueText: String, imageAmount: int, image1 : Sprite, image2 : Sprite, optionAmount : int, option1Text: String, option2Text: String, option3Text: String, option1Event : UnityAction, option2Event : UnityAction, option3Event : UnityAction) {
-	//print('updating Dialogue area');
+	print('updating Dialogue area');
 	DialogueArea.SetActive(true);
 
 	Speaker.text = speakerText;
@@ -39,6 +39,7 @@ function UpdateDialogueArea(speakerText: String, dialogueText: String, imageAmou
     //check if there should be an option 2
 	if(optionAmount > 1) {
 		//set up option2
+		Option2Button.gameObject.SetActive(true);
 		Option2Button.onClick.RemoveAllListeners();
 	    Option2Button.onClick.AddListener (option2Event);
 	    Option2TextArea.text = option2Text;
@@ -50,6 +51,7 @@ function UpdateDialogueArea(speakerText: String, dialogueText: String, imageAmou
 	//check if there should be an option 3
 	if(optionAmount > 2) {
 		//set up option3
+		Option3Button.gameObject.SetActive(true);
 		Option3Button.onClick.RemoveAllListeners();
 	    Option3Button.onClick.AddListener (option3Event);
 	    Option3TextArea.text = option3Text;
@@ -59,12 +61,14 @@ function UpdateDialogueArea(speakerText: String, dialogueText: String, imageAmou
 	}
 
 	if(imageAmount > 0) {
+		Image1Area.gameObject.SetActive(true);
 		Image1Area.sprite = image1;
 	} else {
 		Image1Area.gameObject.SetActive(false);
 	}
 
 	if(imageAmount > 1) {
+		Image2Area.gameObject.SetActive(true);
 		Image2Area.sprite = image2;
 	} else {
 		Image2Area.gameObject.SetActive(false);
