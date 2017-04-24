@@ -7,6 +7,7 @@ static var currentYardDialogue : String = '0';
 static var nextYardDialogueLocation : int = 0;
 
 var DialogueScriptLink : DialogueScript;
+var DistractionDialogueLink : DistractionDialogue;
 
 
 private var AllYardDialogue = new Dictionary.<String, dialogueSnipitObject>();
@@ -172,7 +173,7 @@ AllYardDialogue.Add(
 		//imageAmount
 		1,
 		//image1
-		'Images/Impersonator',
+		'Images/Imposter_left',
 		//image2
 		null,
 		//optionAmount
@@ -202,7 +203,7 @@ AllYardDialogue.Add(
 		//imageAmount
 		1,
 		//image1
-		'Images/Impersonator',
+		'Images/Imposter_left',
 		//image2
 		null,
 		//optionAmount
@@ -230,11 +231,11 @@ AllYardDialogue.Add(
 		//dialogue
 		'It’s probably a prank. Some dumb joke. Toss it in the trash.',
 		//imageAmount
-		1,
+		2,
 		//image1
-		'Images/Pickpocket',
+		'Images/Pickpocket_Right',
 		//image2
-		null,
+		'Images/Imposter_left',
 		//optionAmount
 		1,
 		//option1_text
@@ -260,11 +261,11 @@ AllYardDialogue.Add(
 		//dialogue
 		'But where did all the other prisoners go? And what if it’s telling the truth?\nThe Summer Solstice is only two weeks away.',
 		//imageAmount
-		1,
+		2,
 		//image1
-		'Images/Impersonator',
+		'Images/Pickpocket_Right',
 		//image2
-		null,
+		'Images/Imposter_left',
 		//optionAmount
 		1,
 		//option1_text
@@ -290,11 +291,11 @@ AllYardDialogue.Add(
 		//dialogue
 		'Maybe they’re gonna blow us all up.',
 		//imageAmount
-		1,
+		2,
 		//image1
-		'Images/Pyro',
+		'Images/Arsonist_Right',
 		//image2
-		null,
+		'Images/Imposter_left',
 		//optionAmount
 		1,
 		//option1_text
@@ -320,11 +321,11 @@ AllYardDialogue.Add(
 		//dialogue
 		'What!? No one’s blowing me up!',
 		//imageAmount
-		1,
+		2,
 		//image1
-		'Images/Pickpocket',
+		'Images/Pickpocket_Left',
 		//image2
-		null,
+		'Images/Arsonist_Right',
 		//optionAmount
 		1,
 		//option1_text
@@ -352,7 +353,7 @@ AllYardDialogue.Add(
 		//imageAmount
 		1,
 		//image1
-		'Images/Impersonator',
+		'Images/Imposter_left',
 		//image2
 		null,
 		//optionAmount
@@ -382,7 +383,7 @@ AllYardDialogue.Add(
 		//imageAmount
 		1,
 		//image1
-		'Images/Pickpocket',
+		'Images/Pickpocket_Right',
 		//image2
 		null,
 		//optionAmount
@@ -412,7 +413,7 @@ AllYardDialogue.Add(
 		//imageAmount
 		1,
 		//image1
-		'Images/Pyro',
+		'Images/Arsonist_Right',
 		//image2
 		null,
 		//optionAmount
@@ -442,7 +443,7 @@ AllYardDialogue.Add(
 		//imageAmount
 		1,
 		//image1
-		'Images/Impersonator',
+		'Images/Imposter_left',
 		//image2
 		null,
 		//optionAmount
@@ -472,7 +473,7 @@ AllYardDialogue.Add(
 		//imageAmount
 		1,
 		//image1
-		'Images/Pickpocket',
+		'Images/Pickpocket_Right',
 		//image2
 		null,
 		//optionAmount
@@ -502,7 +503,7 @@ AllYardDialogue.Add(
 		//imageAmount
 		1,
 		//image1
-		'Images/Pyro',
+		'Images/Arsonist_Right',
 		//image2
 		null,
 		//optionAmount
@@ -523,7 +524,8 @@ AllYardDialogue.Add(
 );
 
 function startDistractionScene() {
-	print('begin');
+	//print('begin');
+	DistractionDialogueLink.beginDistraction();
 }
 
 function continueYardDialogue() {

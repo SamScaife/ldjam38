@@ -56,8 +56,8 @@ function Start() {
 }
 
 function loadDialogue(item : dialogueSnipitObject) {
-	print('loading dialogue');
-	print(item);
+	//print('loading dialogue');
+	//print(item);
 	//Set up images
 	var image1Choice = null;
 	var image2Choice = null;
@@ -100,7 +100,7 @@ function loadDialogue(item : dialogueSnipitObject) {
 };
 
 function UpdateDialogueArea(speakerText: String, dialogueText: String, imageAmount: int, image1 : Sprite, image2 : Sprite, optionAmount : int, option1Text: String, option2Text: String, option3Text: String, option1Event : UnityAction, option2Event : UnityAction, option3Event : UnityAction) {
-	print('updating Dialogue area');
+	//print('updating Dialogue area');
 	DialogueArea.SetActive(true);
 
 	Speaker.text = speakerText;
